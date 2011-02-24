@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1298582764 source:f:\programming\cs328\hw4\main.cpp
+	<iostream>
+	"matrix.h"
+
+1298583556 f:\programming\cs328\hw4\matrix.h
+	<iostream>
+	"nvector.h"
+	"exception.h"
+	"matrix.hpp"
+
+1298239590 f:\programming\cs328\hw4\nvector.h
+	"exception.h"
+	"nvector.hpp"
+
+1298169537 f:\programming\cs328\hw4\exception.h
+	<string>
+
+1298239217 f:\programming\cs328\hw4\nvector.hpp
+
+1298583656 f:\programming\cs328\hw4\matrix.hpp
+
