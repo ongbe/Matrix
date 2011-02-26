@@ -20,3 +20,28 @@
 
 1298583656 f:\programming\cs328\hw4\matrix.hpp
 
+1298685603 source:c:\users\lunchbox\desktop\matrix\main.cpp
+	<iostream>
+	<stdlib.h>
+	<fstream>
+	<stdlib.h>
+	"matrix.h"
+	"exception.h"
+
+1298684515 c:\users\lunchbox\desktop\matrix\matrix.h
+	<iostream>
+	"nvector.h"
+	"exception.h"
+	"matrix.hpp"
+
+1298598416 c:\users\lunchbox\desktop\matrix\nvector.h
+	"exception.h"
+	"nvector.hpp"
+
+1298597272 c:\users\lunchbox\desktop\matrix\exception.h
+	<string>
+
+1298598421 c:\users\lunchbox\desktop\matrix\nvector.hpp
+
+1298685913 c:\users\lunchbox\desktop\matrix\matrix.hpp
+

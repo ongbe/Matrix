@@ -6,8 +6,6 @@
 #include "exception.h"
 using namespace std;
 
-
-
 template<class T>
 class Matrix;
 
@@ -21,7 +19,7 @@ istream & operator>>(istream &is, Matrix<T> &obj);
 template<class T>
 class Matrix
 {
-  // friend functions must be declared outside of visibilty sections
+  // friend functions should be declared outside of visibility sections
   friend ostream & operator<< <>(ostream &os, Matrix<T> const &obj);
   friend istream & operator>> <>(istream &is, Matrix<T> &obj);
 
@@ -29,18 +27,22 @@ private:
   int m_dimension;
   NVector<NVector<T> > m_data;
 
-
 public:
   Matrix();
   Matrix(const Matrix<T> &source);
   Matrix(int dimension);
-  ~Matrix();
-  int getDimension();
+  ~Matrix() {};
+  int getDimension() const;
+  void setDimension(int dimension);
 
   // Operator overloads
   NVector<T> &operator[](int i) const;
+  Matrix<T> operator~() const;  // Transpose
+  Matrix<T> operator+(const Matrix<T> &rhs) const;
+  Matrix<T> operator-(const Matrix<T> &rhs) const;
+  Matrix<T> operator*(const Matrix<T> &rhs) const;
+  Matrix<T> operator-() const;
 };
-
 
 
 #include "matrix.hpp"
