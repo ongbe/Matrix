@@ -154,6 +154,44 @@ Matrix<T> Matrix<T>::operator*(const Matrix<T> &rhs) const
 }
 
 template<class T>
+Matrix<T> Matrix<T>::operator*(const int &rhs) const
+{
+  Matrix<T> temp(m_dimension);
+
+  for(int i = 0; i < m_dimension; ++i)
+  {
+    for(int j = 0; j < m_dimension; ++j)
+    {
+      temp[i][j] = rhs*m_data[i][j];
+    }
+  }
+
+  return temp;
+}
+
+template<class T>
+NVector<T> Matrix<T>::operator*(const NVector<T> &rhs) const
+{
+  NVector<T> temp(m_dimension);
+
+  if(m_dimension != rhs.getSize())
+  {
+    throw Exception("The matrix and vector must be the same dimension for "
+                    "multiplication");
+  }
+
+  for(int i = 0; i < m_dimension; ++i)
+  {
+    for(int j = 0; j < m_dimension; ++j)
+    {
+      temp[i] += m_data[j][i]*rhs[j];
+    }
+  }
+
+  return temp;
+}
+
+template<class T>
 Matrix<T> Matrix<T>::operator-() const
 {
   Matrix<T> temp(m_dimension);
@@ -200,4 +238,23 @@ istream & operator>>(istream &is, Matrix<T> &obj)
   }
 
   return is;
+}
+
+template<class T>
+Matrix<T> operator*(const int &lhs, const Matrix<T> &rhs)
+{
+  int dimension = rhs.getDimension();
+  Matrix<T> temp(dimension);
+
+  // Could use scalar*vector here, but indexing over each element manually
+  // cuts down on function calls.
+  for(int i = 0; i < dimension; ++i)
+  {
+    for(int j = 0; j < dimension; ++j)
+    {
+      temp[i][j] = lhs*rhs[i][j];
+    }
+  }
+
+  return temp;
 }

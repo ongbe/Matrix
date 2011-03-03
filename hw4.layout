@@ -2,18 +2,18 @@
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
 	<File name="main.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="743" topLine="14" />
+		<Cursor position="729" topLine="0" />
 	</File>
-	<File name="matrix.h" open="1" top="0" tabpos="3">
-		<Cursor position="1112" topLine="21" />
+	<File name="matrix.h" open="1" top="1" tabpos="3">
+		<Cursor position="887" topLine="8" />
 	</File>
-	<File name="matrix.hpp" open="1" top="1" tabpos="4">
-		<Cursor position="2711" topLine="128" />
+	<File name="matrix.hpp" open="1" top="0" tabpos="4">
+		<Cursor position="3047" topLine="141" />
 	</File>
 	<File name="nvector.h" open="1" top="0" tabpos="2">
-		<Cursor position="4448" topLine="167" />
+		<Cursor position="4448" topLine="153" />
 	</File>
 	<File name="nvector.hpp" open="1" top="0" tabpos="5">
-		<Cursor position="3707" topLine="185" />
+		<Cursor position="3707" topLine="177" />
 	</File>
 </CodeBlocks_layout_file>

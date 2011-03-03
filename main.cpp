@@ -12,9 +12,9 @@ void readInput(Matrix<T> &A, NVector<T> &b, char* filename);
 
 int main(int argc, char *argv[])
 {
-  const int dimension = 4;
+  const int dimension = 3;
   Matrix<double> A, x(dimension), y(dimension);
-  NVector<double> b;
+  NVector<double> b, c(dimension);
 
   try
   {
@@ -31,9 +31,7 @@ int main(int argc, char *argv[])
       }
     }
 
-    cout << x << "\n\n" << y << "\n\n";
-
-    cout << x*y << "\n\n";
+    cout << x << "\n\n" << x*3 << "\n\n";
   }
   catch(Exception &e)
   {

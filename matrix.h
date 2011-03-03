@@ -15,6 +15,9 @@ ostream & operator<<(ostream &os, Matrix<T> const &obj);
 template<class T>
 istream & operator>>(istream &is, Matrix<T> &obj);
 
+// Defined so scalar multiplication can be in the form scalar*matrix
+template<class T>
+Matrix<T> operator*(const int &lhs, const Matrix<T> &rhs);
 
 template<class T>
 class Matrix
@@ -22,6 +25,7 @@ class Matrix
   // friend functions should be declared outside of visibility sections
   friend ostream & operator<< <>(ostream &os, Matrix<T> const &obj);
   friend istream & operator>> <>(istream &is, Matrix<T> &obj);
+  friend Matrix<T> operator* <>(const int &lhs, const Matrix<T> &rhs);
 
 private:
   int m_dimension;
@@ -41,6 +45,8 @@ public:
   Matrix<T> operator+(const Matrix<T> &rhs) const;
   Matrix<T> operator-(const Matrix<T> &rhs) const;
   Matrix<T> operator*(const Matrix<T> &rhs) const;
+  Matrix<T> operator*(const int &rhs) const;
+  NVector<T> operator*(const NVector<T> &rhs) const;
   Matrix<T> operator-() const;
 };
 
