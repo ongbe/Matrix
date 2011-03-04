@@ -45,15 +45,16 @@
 
 1298685913 c:\users\lunchbox\desktop\matrix\matrix.hpp
 
-1299036937 source:f:\programming\cs328\matrix\main.cpp
+1299215826 source:f:\programming\cs328\matrix\main.cpp
 	<iostream>
 	<stdlib.h>
 	<fstream>
 	<stdlib.h>
 	"matrix.h"
+	"gauss.h"
 	"exception.h"
 
-1299135648 f:\programming\cs328\matrix\matrix.h
+1299135837 f:\programming\cs328\matrix\matrix.h
 	<iostream>
 	"nvector.h"
 	"exception.h"
@@ -68,5 +69,14 @@
 
 1299018157 f:\programming\cs328\matrix\nvector.hpp
 
-1299135735 f:\programming\cs328\matrix\matrix.hpp
+1299188958 f:\programming\cs328\matrix\matrix.hpp
+
+1299217835 f:\programming\cs328\matrix\gauss.h
+	"matrix.h"
+	"nvector.h"
+	"exception.h"
+	<cmath>
+	"gauss.hpp"
+
+1299217831 f:\programming\cs328\matrix\gauss.hpp
 

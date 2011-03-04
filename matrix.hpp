@@ -9,6 +9,7 @@ template<class T>
 Matrix<T>::Matrix(const Matrix<T> &source)
 {
   int size = source.getDimension();
+  m_dimension = size;
   m_data.setSize(size);
 
   for(int i = 0; i < size; ++i)

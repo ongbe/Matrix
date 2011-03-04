@@ -33,6 +33,8 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="exception.h" />
+		<Unit filename="gauss.h" />
+		<Unit filename="gauss.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="matrix.h" />
 		<Unit filename="matrix.hpp" />
