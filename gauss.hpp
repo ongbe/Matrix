@@ -19,6 +19,7 @@ NVector<T> Gauss<T>::operator()(const Matrix<T> &A, const NVector<T> &b) const
 
   for(int i = 0; i < n-1; ++i)  // current row/column
   {
+    /*
     // Divide each element in the current row by the pivot to get
     // 1 in the pivot position
     //for(int k = n-1; k >= i; --k)
@@ -28,31 +29,54 @@ NVector<T> Gauss<T>::operator()(const Matrix<T> &A, const NVector<T> &b) const
     //    a[i][k] = a[i][k]/static_cast<T>(fabs(a[i][i]));
     //  }
     //}
+    */
 
-
-    cout << a << '\n';
+    cout << "A:\n" << a;
+    cout << "b:\n" << b << "\n\n\n\n";
 
     // forward substitution
-    // currentrow[i] = multiple*pivotRow[i]+currentrow[i]
     for(int j = i+1; j < n; ++j)
     {
       multiple = -(a[j][i]/a[i][i]);
-      for(int k = i; k < n; ++k)
+
+      for(int k = i; k < n; ++k)  /// TODO: add condition && multiple != 0 for efficiency?
       {
+        // compute for a
         double currentRowAtI = a[j][k]; /// TODO: cleanup
         double pivotRowAtI = a[i][k];
-        double temp = multiple*a[i][k]+a[j][k];
+        double temp = multiple*pivotRowAtI+currentRowAtI;
         a[j][k] = temp;
 
         if(fabs(temp) < FLOAT_TOL)
           a[j][k] = 0;
 
-        //cout << a << '\n';
+
       }
+
+      // compute for b
+      double currentRowAtI = b[j]; /// TODO: cleanup
+      double pivotRowAtI = b[i];
+      double temp = multiple*pivotRowAtI+currentRowAtI;
+      b[j] = temp;
+
+      if(fabs(temp) < FLOAT_TOL)
+        b[j] = 0;
+      //cout << "A:\n" << a << "b:\n" << b << "\n\n";
     }
   }
 
-  cout << "\nFINAL:\n" << a << "\n\n";
+  // Backwards substitution
+  for(int i = n-1; i > 0; --i)
+  {
+      for(int j = i-1; j > 0; --j)
+      {
+        multiple = -(a[j][i]/a[i][i]);
+      }
+  }
+
+
+
+  cout << "\nFINAL A:\n" << a << "FINAL B:\n" << b << "\n\n";
 
   return x;
 }
