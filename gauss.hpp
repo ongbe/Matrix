@@ -122,7 +122,6 @@ NVector<T> Gauss<T>::operator()(const Matrix<T> &A, const NVector<T> &b) const
   }
 
   // Now put into reduced REF by scaling each row to 1 in the pivot
-  /// TODO: this will fail if the diagonal is 0
   for(int i = 0; i < n; ++i)
   {
     b[i] = b[i]/a[i][i];

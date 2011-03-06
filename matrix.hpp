@@ -135,7 +135,6 @@ Matrix<T> Matrix<T>::operator-(const Matrix<T> &rhs) const
 }
 
 
-/// TODO: pre-condition of square matricies
 template<class T>
 Matrix<T> Matrix<T>::operator*(const Matrix<T> &rhs) const
 {
@@ -202,20 +201,7 @@ NVector<T> Matrix<T>::operator*(const NVector<T> &rhs) const
 template<class T>
 Matrix<T> Matrix<T>::operator-() const
 {
-  Matrix<T> temp(m_dimension);
-
-  for(int i = 0; i < m_dimension; ++i)
-  {
-    for(int j = 0; j < m_dimension; ++j)
-    {
-      // Technically a -0 works fine with everything, but for output a -0
-      // doesn't look so good, so just avoid it all together.
-      if(m_data[i][j] != 0)
-        temp[i][j] = -m_data[i][j];
-    }
-  }
-
-  return temp;
+  return (*this * -1);
 }
 
 template<class T>
