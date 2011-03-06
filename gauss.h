@@ -1,3 +1,10 @@
+/**
+  @author Elliott Kopp
+  @file gauss.h
+  @date 3/6/2011
+  @brief The definition of the Gauss class
+*/
+
 #ifndef GAUSS_H_INCLUDED
 #define GAUSS_H_INCLUDED
 
@@ -13,7 +20,7 @@ template<class T>
 class Gauss
 {
 private:
-
+  void swap(T &val1, T &val2) const;
 
 public:
   NVector<T> operator()(const Matrix<T> &A, const NVector<T> &b) const;

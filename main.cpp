@@ -13,18 +13,18 @@ void readInput(Matrix<T> &A, NVector<T> &b, char* filename);
 
 int main(int argc, char *argv[])
 {
-  const int dimension = 3;
-  Matrix<double> A, x(dimension), y(dimension);
-  NVector<double> b, c(dimension);
+  Matrix<double> A;
+  NVector<double> b;
   Gauss<double> g;
 
   try
   {
     readInput(A, b, "F:\\Programming\\CS328\\Matrix\\input.txt");
 
-    cout << "ORIGINAL\n" << A << "\n";
-    g(A,b);
-    //cout << "Original:\n" << A << "\nAfter:\n" << g(A,b) << "\n\n";
+    cout << "A:\n" << A << "~A (transpose):\n" << ~A;
+    cout << "A * ~A:\n" << A * ~A << "\n";
+    cout << "b:\n" << b << "\n\n";
+    cout << "x (answer):\n" << g(A,b) << "\n\n";
   }
   catch(Exception &e)
   {

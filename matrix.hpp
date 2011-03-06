@@ -1,3 +1,10 @@
+/**
+  @author Elliott Kopp
+  @file matrix.hpp
+  @date 3/6/2011
+  @brief The implementation of the Matrix class
+*/
+
 
 template<class T>
 Matrix<T>::Matrix()

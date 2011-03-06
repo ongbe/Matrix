@@ -1,3 +1,10 @@
+/**
+  @author Elliott Kopp
+  @file matrix.h
+  @date 3/6/2011
+  @brief The definition of the Matrix class
+*/
+
 #ifndef MATRIX_H_INCLUDED
 #define MATRIX_H_INCLUDED
 
@@ -35,7 +42,7 @@ public:
   Matrix();
   Matrix(const Matrix<T> &source);
   Matrix(int dimension);
-  ~Matrix() {};
+  ~Matrix() {}; // Yay for managed codez!
   int getDimension() const;
   void setDimension(int dimension);
 

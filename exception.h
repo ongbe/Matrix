@@ -1,3 +1,11 @@
+/**
+  @author Elliott Kopp
+  @file exception.h
+  @date 2/19/2011
+  @brief The definition and implementation of a simple Exception class
+*/
+
+
 #ifndef EXCEPTION_H_INCLUDED
 #define EXCEPTION_H_INCLUDED
 
